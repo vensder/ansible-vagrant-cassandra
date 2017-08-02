@@ -1,0 +1,14 @@
+- name: updating machine
+  apt: update_cache=yes
+
+- name: installing dependencies
+  apt: pkg={{ item }} state=installed update-cache=yes
+  with_items:
+  - cron
+  - curl
+  - netcat
+  - telnet
+  - socat
+  - traceroute
+  - iputils-ping
+  - vim-tiny

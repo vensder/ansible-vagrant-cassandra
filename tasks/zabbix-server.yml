@@ -1,0 +1,40 @@
+- name: Install a .deb package from the internet.
+  apt:
+      deb: http://repo.zabbix.com/zabbix/3.2/ubuntu/pool/main/z/zabbix-release/zabbix-release_3.2-1+xenial_all.deb
+      update_cache: yes
+
+- name: Install zabbix-agent from repo
+  apt:
+    name: zabbix-agent
+    update_cache: yes
+
+- template: >
+    src=./templates/zabbix.j2 
+    dest=/etc/zabbix/zabbix_agentd.conf
+    owner=root
+    group=root
+    mode=0644
+    backup=yes
+
+- service: name=zabbix-agent enabled=yes
+- service: name=zabbix-agent state=started
+- service: name=zabbix-agent state=restarted
+
+- name: copy template docker-compose-zabbix.yml to host
+  template: >
+    src=./templates/docker-compose-zabbix.yml
+    dest=/home/vagrant/docker-compose-zabbix.yml
+    owner=vagrant
+    group=vagrant
+    mode=0644
+
+- name:  templates for zabbix server
+  template: src=./templates/{{item}} dest=/home/vagrant/{{item}}
+  with_items:
+  - '.env_db_mysql'
+  - '.env_java'
+  - '.env_srv'
+  - '.env_web'
+
+- name: starting zabbix-server from docker-compose-zabbix file
+  raw: docker-compose -f /home/vagrant/docker-compose-zabbix.yml up -d

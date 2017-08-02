@@ -1,0 +1,3 @@
+# /etc/systemd/system/socat.service
+[Service]
+ExecStart=/usr/bin/socat TCP-LISTEN:5555,fork TCP:127.0.0.1:7199

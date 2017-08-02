@@ -1,0 +1,18 @@
+UserParameter=nodetool.heap,egrep '^Heap' /tmp/nodetool_info | awk '{ print $5}'
+
+UserParameter=nodetool.load,egrep '^Load' /tmp/nodetool_info | awk '{ print $3}'
+
+# UserParameter=nodetool.uptime,egrep '^Uptime' /tmp/nodetool_info | awk '{print $4}'
+UserParameter=nodetool.uptime,if egrep -q '^Uptime' /tmp/nodetool_info; then egrep '^Uptime' /tmp/nodetool_info | awk '{print $4}'; else echo '0'; fi;
+
+# UserParameter=nodetool.read_latency, egrep '^[[:space:]]*Read Latency' /tmp/nodetool_tablestats_system | awk '{print $3}'
+UserParameter=nodetool.read_latency,if egrep -q '^[[:space:]]*Read Latency' /tmp/nodetool_tablestats_system; then egrep '^[[:space:]]*Read Latency' /tmp/nodetool_tablestats_system | awk '{print $3}'; else echo '0.0'; fi;
+
+# UserParameter=nodetool.write_latency, egrep '^[[:space:]]*Write Latency' /tmp/nodetool_tablestats_system | awk '{print $3}'
+UserParameter=nodetool.write_latency,if egrep -q '^[[:space:]]*Write Latency' /tmp/nodetool_tablestats_system; then egrep '^[[:space:]]*Write Latency' /tmp/nodetool_tablestats_system | awk '{print $3}'; else echo '0.0'; fi;
+
+UserParameter=nodetool.tpstats.Native-Transport-Requests.Completed,if egrep -q 'Native-Transport-Requests' /tmp/nodetool_tpstats; then egrep 'Native-Transport-Requests' /tmp/nodetool_tpstats | awk '{print $4}'; else echo '0'; fi;
+
+UserParameter=nodetool.tpstats.Native-Transport-Requests.All-time-blocked,if egrep -q 'Native-Transport-Requests' /tmp/nodetool_tpstats; then egrep 'Native-Transport-Requests' /tmp/nodetool_tpstats | awk '{print $6}'; else echo '0'; fi;
+
+

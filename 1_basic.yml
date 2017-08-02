@@ -1,0 +1,33 @@
+#  basic
+---
+- hosts: vault
+
+  become: true
+  become_method: sudo
+  become_user: root
+
+  tasks:
+
+    - name: Set hostname on hosts
+      hostname: name={{inventory_hostname}}
+
+      #    - shell: sudo pip uninstall -y awscli
+    - name: Install required packages
+      apt: name={{ item }}
+      with_items:
+        - vim
+        - wget
+        - telnet
+        - traceroute
+        - netcat
+        - mc
+        - jq
+        - htop
+        - python-pip
+        - awscli
+        - iftop
+        - letsencrypt
+        - ntp
+
+  #    - name: Install awscli via pip
+  #    shell: sudo pip install awscli
