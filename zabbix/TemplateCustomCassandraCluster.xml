@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>Template Custom Cassandra Cluster nds</template>
-            <name>Template Custom Cassandra Clusternds nds</name>
+            <template>Template Custom Cassandra Cluster</template>
+            <name>Template Custom Cassandra Cluster</name>
             <description/>
             <groups>
                 <group>

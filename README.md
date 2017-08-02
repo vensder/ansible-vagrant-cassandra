@@ -1,6 +1,6 @@
 ## Introduction
 
-Easily provision 3 DSE Cassandra nodes with Opscenter across 4 VMs using Ansible with Vagrant & Virtualbox.
+Easily provision 3 DSE Cassandra nodes with Opscenter across 4 VMs using Ansible with Vagrant & Virtualbox. Provisioning possible no Windows host too (ansible playbooks run from controller linux virtual host).
 
 ## Prerequisites
 
@@ -36,20 +36,27 @@ Resume VMs: ```vagrant up```
 
 Destroy the VMs (requires re-provisioning): ```vagrant destroy```
 
+Vagrants plugins and additions:
+
 ```bash
 vagrant plugin list
 vagrant-guest_ansible (0.0.3)
 vagrant-share (1.1.9, system)
 vagrant-vbguest (0.14.2)
 ```
+Load data schema:
 
 ```cqlsh -f /vagrant/cassandra-bulkload-example/schema.cql   192.168.50.21 9042```
+
+Prepare and load custom data:
 
 ```wget https://query1.finance.yahoo.com/v7/finance/download/AAPL?period1=345416400&period2=1499806800&interval=1d&events=history&crumb=eyvNS4FSdMB```
 
 ```wget https://query1.finance.yahoo.com/v7/finance/download/GOOG?period1=1092862800&period2=1499806800&interval=1d&events=history&crumb=eyvNS4FSdMB```
 
 ```pip install panda```
+
+Python code:
 
 ```python
 import pandas as pd
@@ -77,12 +84,7 @@ cqlsh:quote> COPY historical_prices FROM '../AAPL.csv' WITH DATETIMEFORMAT='%Y-%
 cqlsh:quote> COPY historical_prices FROM '../GOOG.csv' WITH DATETIMEFORMAT='%Y-%m-%d';
 ```
 
-```./check_cassandra_nodes.pl -u cassandra -p cassandra```
-
-```bash
- ./cassandra.pl
-CASSANDRA OK -  | heap_mem=0.00
-```
+Stress tests:
 
 ```cassandra-stress write -node 192.168.50.21```
 
@@ -109,18 +111,21 @@ Native-Transport-Requests              0         0        4957375         0     
 ...
 ```
 
+Using socat for JMX port exposing:
 
 ```bash
-root@nd1:~# apt install socat
+root@node1:~# apt install socat
 Reading package lists... Done
 Building dependency tree       
 Reading state information... Done
 socat is already the newest version (1.7.3.1-1).
 0 upgraded, 0 newly installed, 0 to remove and 37 not upgraded.
-root@nd1:~# socat TCP-LISTEN:7199,fork TCP:192.168.50.22:5555
+root@node1:~# socat TCP-LISTEN:7199,fork TCP:192.168.50.22:5555
 2017/07/20 09:46:43 socat[29520] E bind(5, {AF=2 0.0.0.0:7199}, 16): Address already in use
-root@nd1:~# socat TCP-LISTEN:5555,fork TCP:127.0.0.1:7199
+root@node1:~# socat TCP-LISTEN:5555,fork TCP:127.0.0.1:7199
 ```
+
+Using jmxterm for JMX testing:
 
 ```bash
 wget https://sourceforge.net/projects/cyclops-group/files/jmxterm/1.0-alpha-4/jmxterm-1.0-alpha-4-uber.jar/download

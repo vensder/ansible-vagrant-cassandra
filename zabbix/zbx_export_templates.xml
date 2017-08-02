@@ -4,7 +4,7 @@
     <date>2017-07-20T17:23:36Z</date>
     <groups>
         <group>
-            <name>Cassandra nds</name>
+            <name>Cassandra</name>
         </group>
         <group>
             <name>Custom</name>
@@ -12,8 +12,8 @@
     </groups>
     <templates>
         <template>
-            <template>Cassandra nds</template>
-            <name>Cassandra nds</name>
+            <template>Cassandra</template>
+            <name>Cassandra</name>
             <description/>
             <groups>
                 <group>

@@ -1,8 +1,0 @@
----
-- hosts: zabbix
-  user: vagrant
-  become: yes
-  tasks:
-
-  - include: tasks/zabbix-server.yml
-

@@ -4,7 +4,7 @@
     <date>2017-07-17T10:36:41Z</date>
     <screens>
         <screen>
-            <name>JMX Cassandra Cluster nds</name>
+            <name>JMX Cassandra Cluster</name>
             <hsize>3</hsize>
             <vsize>7</vsize>
             <screen_items>
@@ -25,7 +25,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Clients</name>
-                        <host>nd1</host>
+                        <host>node1</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -47,7 +47,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Clients</name>
-                        <host>nd2</host>
+                        <host>node2</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -69,7 +69,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Clients</name>
-                        <host>nd3</host>
+                        <host>node3</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -91,7 +91,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Dropped Messages</name>
-                        <host>nd1</host>
+                        <host>node1</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -113,7 +113,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Dropped Messages</name>
-                        <host>nd2</host>
+                        <host>node2</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -135,7 +135,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Dropped Messages</name>
-                        <host>nd3</host>
+                        <host>node3</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -157,7 +157,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Latency: ClientRequest: Read/Write: OneMinuteRate (Throughput: (reads|writes)/s)</name>
-                        <host>nd1</host>
+                        <host>node1</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -179,7 +179,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Latency: ClientRequest: Read/Write: OneMinuteRate (Throughput: (reads|writes)/s)</name>
-                        <host>nd2</host>
+                        <host>node2</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -201,7 +201,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Latency: ClientRequest: Read/Write: OneMinuteRate (Throughput: (reads|writes)/s)</name>
-                        <host>nd3</host>
+                        <host>node3</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -223,7 +223,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Latency: ClientRequest: Read: OneMinuteRate (Throughput: reads/s)</name>
-                        <host>nd1</host>
+                        <host>node1</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -245,7 +245,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Latency: ClientRequest: Read: OneMinuteRate (Throughput: reads/s)</name>
-                        <host>nd2</host>
+                        <host>node2</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -267,7 +267,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Latency: ClientRequest: Read: OneMinuteRate (Throughput: reads/s)</name>
-                        <host>nd3</host>
+                        <host>node3</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -289,7 +289,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Latency: ClientRequest: Write: OneMinuteRate (Throughput: writes/s)</name>
-                        <host>nd1</host>
+                        <host>node1</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -311,7 +311,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Latency: ClientRequest: Write: OneMinuteRate (Throughput: writes/s)</name>
-                        <host>nd2</host>
+                        <host>node2</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -333,7 +333,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Latency: ClientRequest: Write: OneMinuteRate (Throughput: writes/s)</name>
-                        <host>nd3</host>
+                        <host>node3</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -355,7 +355,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Nodes Up / Down</name>
-                        <host>nd1</host>
+                        <host>node1</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -377,7 +377,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Nodes Up / Down</name>
-                        <host>nd2</host>
+                        <host>node2</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -399,7 +399,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Nodes Up / Down</name>
-                        <host>nd3</host>
+                        <host>node3</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -421,7 +421,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Storage</name>
-                        <host>nd1</host>
+                        <host>node1</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -443,7 +443,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Storage</name>
-                        <host>nd2</host>
+                        <host>node2</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
@@ -465,7 +465,7 @@
                     <sort_triggers>0</sort_triggers>
                     <resource>
                         <name>Cassandra Cluster: Storage</name>
-                        <host>nd3</host>
+                        <host>node3</host>
                     </resource>
                     <max_columns>3</max_columns>
                     <application/>
