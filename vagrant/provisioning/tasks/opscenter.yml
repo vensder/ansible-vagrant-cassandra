@@ -30,7 +30,7 @@
     shell: DEBIAN_FRONTEND=noninteractive apt-get -y install oracle-java8-installer oracle-java8-set-default
 
   - name: adding dse repo
-    shell: echo "deb http://vensder%40gmail.com:oZP44Cd5uy2nDS6M@debian.datastax.com/enterprise stable main" | sudo tee -a /etc/apt/sources.list.d/datastax.sources.list
+    shell: echo "deb http://YourEmaIl%40gmail.com:YourPaSsw0rDFromDaTAStaxAcc@debian.datastax.com/enterprise stable main" | sudo tee -a /etc/apt/sources.list.d/datastax.sources.list
     register: dse_repo
     until: dse_repo|success
     retries: 5
