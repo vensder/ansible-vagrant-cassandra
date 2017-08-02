@@ -24,9 +24,7 @@
         - jq
         - htop
         - python-pip
-        - awscli
         - iftop
-        - letsencrypt
         - ntp
 
   #    - name: Install awscli via pip

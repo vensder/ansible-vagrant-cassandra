@@ -2,10 +2,9 @@
 env/
 env3/
 .idea
-
-
 .idea/workspace.xml
 .idea/ansible-vagrant-cassandra.iml
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
+*.retry
