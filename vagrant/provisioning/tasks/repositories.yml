@@ -8,7 +8,7 @@
 
 - name: adding dse repo
   apt_repository:
-    repo: deb http://vensder%40gmail.com:oZP44Cd5uy2nDS6M@debian.datastax.com/enterprise stable main
+    repo: deb http://YourEmaIl%40gmail.com:YourPaSsw0rDFromDaTAStaxAcc@debian.datastax.com/enterprise stable main
     state: present
     filename: datastax.sources
   register: dse_repo
