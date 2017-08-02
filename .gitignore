@@ -8,3 +8,5 @@ env3/
 .idea/modules.xml
 .idea/vcs.xml
 *.retry
+.vscode
+
