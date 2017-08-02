@@ -2,6 +2,8 @@ Used this repos:
 
 <https://github.com/joeljacobson/vagrant-ansible-cassandra>
 
+<https://github.com/yukim/cassandra-bulkload-example>
+
 <https://github.com/yubu/zabbix-cassandra-template>
 
 
