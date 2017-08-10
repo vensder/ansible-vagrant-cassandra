@@ -9,7 +9,7 @@
 
 ## Introduction
 
-Easily provision 3 DSE Cassandra nodes with Opscenter across 4 VMs using Ansible with Vagrant & Virtualbox. Provisioning possible no Windows host too (ansible playbooks run from controller linux virtual host).
+Easily provision 3 DSE Cassandra nodes with Opscenter across 4 VMs using Ansible with Vagrant & Virtualbox. Provisioning possible on Windows host too (ansible playbooks run from controller linux virtual host).
 
 ## Prerequisites
 
